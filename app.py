@@ -68,7 +68,7 @@ def set_background(png_file):
 
 
 # Set your background image path
-set_background("C:\\Users\\Mudit\\Downloads\\app bg1.WEBP")
+set_background("app_bg1.webp")
 
 # Define functions for creating sequences and predicting future prices
 def create_sequences(data, sequence_length):
