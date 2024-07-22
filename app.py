@@ -187,7 +187,7 @@ if st.button('Submit'):
             X_test = X_test.reshape((X_test.shape[0], X_test.shape[1], 1))
 
     # Load pre-trained model
-            model = tf.keras.models.load_model("C:\\Users\\Mudit\\AppData\\Local\\Programs\\Python\\Python312\\Scripts\\stock_basic_app\\prediction1_model.keras")
+            model = tf.keras.models.load_model("prediction1_model.keras")
 
     # Predict test data
             pred = model.predict(X_test)
