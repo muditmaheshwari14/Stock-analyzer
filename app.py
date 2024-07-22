@@ -67,7 +67,7 @@ def set_background(png_file):
     </style>
     ''' % bin_str
     st.markdown(page_bg_img, unsafe_allow_html=True)
-background_image_path = os.path.abspath("app_bg1.WEBP")
+background_image_path = app_bg1.webp
 
 # Set your background image path
 set_background(background_image_path)
