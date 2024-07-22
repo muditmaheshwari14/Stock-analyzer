@@ -11,6 +11,7 @@ import cohere
 import plotly.graph_objects as go
 import requests
 
+set_background("app_bg1.WEBP")
 # Function to encode image to base64
 def get_base64_of_bin_file(bin_file):
     with open(bin_file, 'rb') as f:
@@ -68,7 +69,7 @@ def set_background(png_file):
 
 
 # Set your background image path
-set_background("C:\\Users\\Mudit\\Downloads\\app bg1.WEBP")
+set_background("app bg1.WEBP")
 
 # Define functions for creating sequences and predicting future prices
 def create_sequences(data, sequence_length):
