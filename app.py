@@ -350,4 +350,4 @@ if st.button('Submit'):
                 st.sidebar.markdown('<p style="color: black; font-size: 1.5em; text-align: center;">No Recent News</p>', unsafe_allow_html=True)
 
     except Exception as e:
-            st.error(" ")
+            st.error("Model didnot worked ")
