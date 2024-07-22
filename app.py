@@ -10,6 +10,7 @@ import openai
 import cohere
 import plotly.graph_objects as go
 import requests
+import os
 
 
 # Function to encode image to base64
@@ -66,10 +67,10 @@ def set_background(png_file):
     </style>
     ''' % bin_str
     st.markdown(page_bg_img, unsafe_allow_html=True)
-
+background_image_path = os.path.abspath("app_bg1.WEBP")
 
 # Set your background image path
-set_background("app_bg1.WEBP")
+set_background(background_image_path)
 
 # Define functions for creating sequences and predicting future prices
 def create_sequences(data, sequence_length):
