@@ -67,7 +67,7 @@ def set_background(png_file):
     </style>
     ''' % bin_str
     st.markdown(page_bg_img, unsafe_allow_html=True)
-background_image_path = app_bg1.webp
+background_image_path = 'https://github.com/muditmaheshwari14/Stock-analyzer/blob/main/app_bg1.webp'
 
 # Set your background image path
 set_background(background_image_path)
