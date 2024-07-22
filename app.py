@@ -24,11 +24,7 @@ def set_background(png_file):
     bin_str = get_base64_of_bin_file(png_file)
     page_bg_img = '''
     <style>
-    .stApp {
-        background-image: url("data:image/png;base64,{bin_str}");
-        background-size: cover;
-        color: white; /* Text color */
-    }
+    
     /* Style for text input label */
     .stTextInput label {
         color: #FFFFFF; /* Change this to your desired label color */
@@ -66,11 +62,8 @@ def set_background(png_file):
     }
     </style>
     ''' % bin_str
-    st.markdown(page_bg_img, unsafe_allow_html=True)
-background_image_path = https://github.com/muditmaheshwari14/Stock-analyzer/blob/main/app_bg1.webp
+    
 
-# Set your background image path
-set_background(background_image_path)
 
 # Define functions for creating sequences and predicting future prices
 def create_sequences(data, sequence_length):
