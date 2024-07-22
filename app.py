@@ -134,8 +134,8 @@ if st.button('Submit'):
             data = yf.download(stock, start)
 
             if data.empty:
-                st.markdown('<p style="color: white; font-size: 36px; text-align: center;">Invalid stock symbol. Please enter a valid stock symbol.</p>', unsafe_allow_html=True)
-                st.error(' ')
+                st.markdown('<p style="color: black; font-size: 36px; text-align: center;">Invalid stock symbol. Please enter a valid stock symbol.</p>', unsafe_allow_html=True)
+                st.error('model not working ')
             else:
                  start = '2012-01-01'
 
