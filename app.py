@@ -24,7 +24,7 @@ def set_background(png_file):
     page_bg_img = '''
     <style>
     .stApp {
-        background-image: url("data:image/png;base64,%s");
+        background-image: url("data:image/png;base64,{bin_str}");
         background-size: cover;
         color: white; /* Text color */
     }
@@ -69,7 +69,7 @@ def set_background(png_file):
 
 
 # Set your background image path
-set_background("app bg1.WEBP")
+set_background("app_bg1.WEBP")
 
 # Define functions for creating sequences and predicting future prices
 def create_sequences(data, sequence_length):
