@@ -148,7 +148,7 @@ if st.button('Submit'):
     
 ]
             df = filtered_financials
-            df_filter = df.loc[df.index.isin(essential_rows)]
+            df_filter = df.loc[df.index.isin(essential_rows)].copy()
             market_price = get_market_price(stock)
             eps_values = df_filter.loc['Diluted EPS'] if 'Diluted EPS' in df_filter.index else pd.Series()
             pe_ratios = calculate_pe_ratios(market_price, eps_values)
