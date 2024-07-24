@@ -113,7 +113,7 @@ def fetch_news(stock, api_key, num_articles=5):
     return news_data.get('articles', [])
 
 # Load pre-trained model
-model_path = "prediction1_model.keras"
+model_path = "C:\\Users\\Mudit\\AppData\\Local\\Programs\\Python\\Python312\\Scripts\\stock_basic_app\\models\\prediction1_model.keras"
 model = tf.keras.models.load_model(model_path)
 
 # Streamlit sidebar with option menu
@@ -142,7 +142,7 @@ elif selected_tab == "Predict Price":
     if 'stock' in st.session_state and 'weeks' in st.session_state:
         stock = st.session_state.stock
         weeks = st.session_state.weeks
-        data = yf.download(stock, start='2012-01-01',progress=False)
+        data = yf.download(stock, start='2012-01-01')
 
         if not data.empty:
             data_close = data[['Close']]
@@ -360,16 +360,17 @@ elif selected_tab == "Technical Analysis":
 elif selected_tab == "News":
     if 'stock' in st.session_state:
         stock = st.session_state.stock
-        api_key = 'fdc82be448d94b199b3b54ae268f4b1d'  # Replace with your News API key
-        news_articles = fetch_news(stock, api_key)
-        
-        st.markdown(f'<p style="color: white; font-size: 1.5em; text-align: center;">Latest News about {stock}</p>', unsafe_allow_html=True)
+        api_key = "455d45b1175146fe88765ea9d505ba9a"  # Replace with your News API key
+        articles = fetch_news(stock, api_key, num_articles=5)
 
-        for article in news_articles:
-            st.markdown(f"<h3 style='color:white;'>{article['title']}</h3>", unsafe_allow_html=True)
-            st.markdown(f"<p style='color:gray;'>{article['description']}</p>", unsafe_allow_html=True)
-            st.markdown(f"<a style='color:white;' href='{article['url']}'>Read more</a>", unsafe_allow_html=True)
-    else:
-        st.warning('Please enter a stock symbol in the Home tab.')
+        if articles:
+            st.markdown('<p style="color: white; font-size: 1.5em; text-align: center;">Recent News Articles</p>', unsafe_allow_html=True)
+            for article in articles:
+                st.write(f"**{article['title']}**")
+                st.write(article['description'])
+                st.write(f"[Read more]({article['url']})")
+                st.write("---")
+        else:
+            st.write("No news articles found.")
 
 
