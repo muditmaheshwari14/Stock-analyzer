@@ -13,6 +13,7 @@ matplotlib==3.9.1
 matplotlib-inline==0.1.7
 cohere==5.6.1
 requests==2.32.3
+streamlit-option-menu==0.3.13
 
 
 
