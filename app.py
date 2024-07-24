@@ -142,7 +142,7 @@ elif selected_tab == "Predict Price":
     if 'stock' in st.session_state and 'weeks' in st.session_state:
         stock = st.session_state.stock
         weeks = st.session_state.weeks
-        data = yf.download(stock, start='2012-01-01')
+        data = yf.download(stock, start='2012-01-01',progress=False)
 
         if not data.empty:
             data_close = data[['Close']]
