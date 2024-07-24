@@ -8,6 +8,7 @@ import base64
 import cohere
 import plotly.graph_objects as go
 import requests
+import os
 from sklearn.preprocessing import MinMaxScaler
 from streamlit_option_menu import option_menu
 
@@ -113,8 +114,8 @@ def fetch_news(stock, api_key, num_articles=5):
     return news_data.get('articles', [])
 
 # Load pre-trained model
-
-model = tf.keras.models.load_model(prediction1_model.keras)
+model_path = os.path.join(os.path.dirname(__file__), 'prediction1_model.keras')
+model = tf.keras.models.load_model(model_path)
 
 # Streamlit sidebar with option menu
 with st.sidebar:
