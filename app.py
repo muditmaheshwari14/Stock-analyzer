@@ -157,6 +157,7 @@ if st.button('Submit'):
             eps_values = df_filter.loc['Diluted EPS'] if 'Diluted EPS' in df_filter.index else pd.Series()
             pe_ratios = calculate_pe_ratios(market_price, eps_values)
             if not eps_values.empty:
+                df_filter = df_filter.copy()
                 df_filter.loc['P/E Ratio'] = pe_ratios
 
             st.markdown('<p style="color: white; font-size: 1.5em; text-align: center;">Stock Data</p>', unsafe_allow_html=True)
