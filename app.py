@@ -113,8 +113,8 @@ def fetch_news(stock, api_key, num_articles=5):
     return news_data.get('articles', [])
 
 # Load pre-trained model
-model_path = "C:\\Users\\Mudit\\AppData\\Local\\Programs\\Python\\Python312\\Scripts\\stock_basic_app\\models\\prediction1_model.keras"
-model = tf.keras.models.load_model(model_path)
+prediction1_model.keras
+model = tf.keras.models.load_model(prediction1_model.keras)
 
 # Streamlit sidebar with option menu
 with st.sidebar:
